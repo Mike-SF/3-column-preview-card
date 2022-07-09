@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: scale(1, 1.1);
+}
+
+p {
+  color: var(--transparent-white);
+  font-size: 15px;
+}
+
+button {
+  color: #000;
+  background-color: var(--light-gray);
+  border: 2px solid var(--light-gray);
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 2rem;
+}
+
+.card {
+  width: 100%;
+  position: relative;
+}
+
+.card:first-child {
+  border-radius: 25px 25px 0 0;
+}
+
+.card:last-child {
+  border-radius: 0 0 25px 25px;
+}
+
+.card img,
+.card h1,
+.card p,
+.card button {
+  margin: 1rem 3rem;
+}
+
+.card img {
+  margin-top: 3rem;
+}
+
+.card button {
+  position: absolute;
+  bottom: 2rem;
+}
+
+.card button:hover {
+  cursor: pointer;
+  background: none;
+  color: var(--light-gray);
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 10rem;
+  max-width: 480px;
+}
+
+.card1 {
+  background-color: var(--orange);
+}
+
+.card1 button {
+  color: var(--orange);
+}
+.card2 {
+  background-color: var(--dark-cyan);
+}
+
+.card2 button {
+  color: var(--dark-cyan);
+}
+
+.card3 {
+  background-color: var(--very-dark-cyan);
+}
+
+.card3 button {
+  color: var(--very-dark-cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 810px) {
+  .container {
+    flex-direction: row;
+  }
+  .card:first-child {
+    border-radius: 25px 0 0 25px;
+  }
+
+  .card:last-child {
+    border-radius: 0 25px 25px 0;
+  }
+}
